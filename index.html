@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World's Hardest Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #2c3e50;
+            font-family: Arial, sans-serif;
+        }
+        #canvas {
+            border: 2px solid #34495e;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        }
+        .game-container {
+            text-align: center;
+        }
+        h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .controls {
+            color: white;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #34495e;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>World's Hardest Game</h1>
+        <canvas id="canvas"></canvas>
+        <div class="controls">
+            Use arrow keys to move<br>
+            Avoid blue enemies and collect yellow coins
+        </div>
+    </div>
+    <script src="main.js" type="module"></script>
+    <script>
+        // Handle keyboard events
+        window.addEventListener("keydown", function(e) {
+            if(["Space","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"].indexOf(e.code) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+    </script>
+</body>
+</html> 
